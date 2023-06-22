@@ -1,3 +1,9 @@
+import { startUp } from './startup.js';
+
+import './reset.css';
+
 import './style.css';
 
-console.log(':)');
+const content = document.querySelector("#content");
+
+startUp(content);
