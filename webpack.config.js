@@ -8,11 +8,12 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     static: './dist',
+    devMiddleware: { writeToDisk: true }
   },
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: "./src/3images", to: "./dist" }
+        { from: "./src/3images/", to: "./", force: true }
       ],
     }),
     new HtmlWebpackPlugin({
@@ -23,7 +24,7 @@ module.exports = {
   ],
   output: {
       filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
       clean: true,
     },
   optimization: {
