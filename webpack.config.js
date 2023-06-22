@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -9,10 +10,16 @@ module.exports = {
     static: './dist',
   },
   plugins: [
-    new HtmlWebpackPlugin({
-        title: 'Thai Food Near Me',
-        template: './src/index.html'
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/3images", to: "./dist" }
+      ],
     }),
+    new HtmlWebpackPlugin({
+      title: 'Thai Food Near Me',
+      template: './src/index.html',
+      favicon: './src/favicon.ico'
+    })
   ],
   output: {
       filename: '[name].bundle.js',
@@ -29,7 +36,7 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: 'asset/resource',
       },
     ],
