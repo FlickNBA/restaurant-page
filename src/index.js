@@ -13,3 +13,5 @@ startUp(content);
 const rest = document.querySelector(".rest");
 
 home(rest);
+
+console.log(":)");
