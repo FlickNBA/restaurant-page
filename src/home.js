@@ -38,7 +38,7 @@ export function home(root) {
 
     let textDiv = document.createElement('div');
 
-    let pText = `Welcome to our website. We offer quality Thai food such as <strong>${chosenText}</strong> you can see on your left! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mauris tellus, ornare a maximus ac, lacinia ac purus. Morbi non ipsum eu urna gravida fringilla. Pellentesque suscipit ligula nibh, sed dignissim libero dictum quis. Suspendisse rutrum libero quam, et posuere quam bibendum vulputate. Curabitur eu luctus lectus, faucibus viverra nisi.`
+    let pText = `Welcome to our website. We offer quality Thai food such as <strong>${chosenText}</strong> you can see on your left! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mauris tellus, ornare a maximus ac, lacinia ac purus. Morbi non ipsum eu urna gravida fringilla.`
 
     textDiv.classList.add('textDiv');
 
