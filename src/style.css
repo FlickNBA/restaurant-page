@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto+Mono:wght@400;600&display=swap');
 
 body {
     height: 100vh;
@@ -8,6 +8,10 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+p {
+    font-family: 'Roboto Mono', monospace;
 }
 
 #content {
@@ -96,10 +100,21 @@ body {
     grid-template-columns: 1fr 2fr;
 }
 
-.imageDiv {
-    background-color: red;
+.imageDiv, .textDiv {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.textDiv {
-    background-color: orange;
+.textDiv p {
+    padding: 1rem;
+    color: #fff;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+.foodImage {
+    border-radius: 1rem;
 }
